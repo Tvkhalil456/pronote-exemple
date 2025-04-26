@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion</title>
+
+    <!-- Ionic Framework -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+    <!-- Ton CSS perso -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Icône -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("TON_USER_ID"); // ⚡ Remplace par ton User ID EmailJS
+      })();
+    </script>
+  </head>
+
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title class="ion-text-center">CONNEXION PRONOTE</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size-md="4" offset-md="4">
+              <ion-item>
+                <ion-icon slot="start" name="mail-outline"></ion-icon>
+                <ion-input id="email" type="email" placeholder="E-mail *"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size-md="4" offset-md="4">
+              <ion-item>
+                <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+                <ion-input id="password" type="password" placeholder="Mot de passe *"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size-md="4" offset-md="4">
+              <ion-button class="ion-margin-top" color="primary" expand="block" shape="round" mode="ios" id="login-button">
+                Se connecter
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+    </ion-app>
+
+    <!-- Ton JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
